@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+   <a th:href="@{/good}">Add Employee</a>
+
+   <table>
+   
+   <tr>
+   <th>first name</th>
+   <th>last name</th>
+   <th>email</th>
+   </tr>
+   
+   <tr th:each="hello :${employee}">
+   
+   <td th:text="${hello.firstName}"></td>
+   <td th:text="${hello.secondName}"></td>
+   <td th:text="${hello.email}"></td>
+   
+   <td> <a th:href="@{/y/{id}(id=${hello.id})}">update</a></td>
+   
+   
+   
+   <td> <a th:href="@{/z/{id}(id=${hello.id})}">delete</a></td>
+   
+   
+   
+   </tr>
+   
+   </table>
+
+
+</body>
+</html>
